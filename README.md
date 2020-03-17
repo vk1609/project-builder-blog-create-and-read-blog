@@ -70,17 +70,13 @@ Download ojdbc6.jar from the given link [https://www.oracle.com/database/technol
       - void insertBlog(Blog blog) - method to insert the blog into the database.
       - List<Blog> selectAllBlogs() - method to retrieve the blogs from the database.
 
-## Progression 4:
-1. **Go to src/controller - AddNewBlogController.**
-2. **Create objects for the Blog and BlogDaoImpl class.**
-3. **Call the insertBlog methods and pass Blog as argument to insertBlog.**
-4. **Go to database and check if your blog is successfully inserted.**
+## Running the project
+1. **Do not modify any code in AddViewController and ViewAllBlogController.**
+2. **Right click the project - select run as run on server.**
+3. **Login with the username and password.**
+4. **Click Add Post button to add your post.**
+5. **Click All Blogs to display all blogs stored in the database.**
 
-## Progression 5:
-1. **Go to src/controller - ViewAllBlogController.**
-2. **Create object BlogDaoImpl class.**
-3. **Call the selectAllBlogs methods and store the return value in a list variable called as listBlog.**
-4. **Your output is the list of blogs stored in the database.**
 
 ### Note:
 
