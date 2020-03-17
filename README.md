@@ -36,46 +36,44 @@ And finally, create a pull request so your ProGrad Mentor (PM) can review your w
 6. ***Once the progressions are completed follow the instructions to run the application and test your code.***
 7. ***Add appropriate jars to your project directory.***
 
-
-
 ## Requirements
 Download ojdbc6.jar from the given link [https://www.oracle.com/database/technologies/jdbcdriver-ucp-downloads.html]
 
 ## Progression 0:
-1. **Right click on src folder and select new - file and name it as jdbc.properties.**
-2. **You can use the jdbc properties given below in the NOTE section.**
+1. Right click on src folder and select new - file and name it as jdbc.properties.
+2. You can use the jdbc properties given below in the NOTE section.
 
 ## Progression 1:
-1. **Create a class called as `ConnectionManager` inside the utility package.**
-2. **Create a method public static Connection getConnection() which returns a connection object.**
-3. **Use the method public static Properties loadPropertiesFile() to load the jdbc properties from the jdbc.properties file.**
+1. Create a class called as `ConnectionManager` inside the utility package.
+2. Create a method public static Connection getConnection() which returns a connection object.
+3. Use the method public static Properties loadPropertiesFile() to load the jdbc properties from the jdbc.properties file.
 
 ## Progression 2:
-1. **Create a model class called as `Blog' inside the model package with the following arguments,**
+1. Create a model class called as `Blog' inside the model package with the following arguments,
     - int blogId
 	  - String blogTitle;
 	  - String blogDescription;
 	  - LocalDate postedOn;
-2. **Include appropriate getters and setters method.**
+2. Include appropriate getters and setters method.
 
 ## Progression 3:
-1. **Create an interface called BlogDaoInterface inside the dao package with the following methods,**
+1. Create an interface called BlogDaoInterface inside the dao package with the following methods,
      - void insertBlog(Blog blog)
      - List<Blog> selectAllBlogs()
 
 ## Progression 4:
-1. **Create a dao-class called BlogDaoImpl inside the dao package.**
-2. **It should implement the BlogDaoInterface.**
-3. **Implement the following methods,**
+1. Create a dao-class called BlogDaoImpl inside the dao package.
+2. It should implement the BlogDaoInterface.
+3. Implement the following methods,
       - void insertBlog(Blog blog) - method to insert the blog into the database.
       - List<Blog> selectAllBlogs() - method to retrieve the blogs from the database.
 
 ## Running the project
-1. **Do not modify any code in AddViewController and ViewAllBlogController.**
-2. **Right click the project - select run as run on server.**
-3. **Login with the username and password.**
-4. **Click Add Post button to add your post.**
-5. **Click All Blogs to display all blogs stored in the database.**
+1. Do not modify any code in AddViewController and ViewAllBlogController.
+2. Right click the project - select run as run on server.
+3. Login with the username and password.
+4. Click Add Post button to add your post.
+5. Click All Blogs to display all blogs stored in the database.
 
 
 ### Note:
@@ -100,4 +98,5 @@ username=your_username
 password=your_password
 
 ```
-  
+
+Happy Coding ❤️
