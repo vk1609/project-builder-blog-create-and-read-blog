@@ -5,7 +5,7 @@
 Remember your client Mr. Alex? 
 
 Well, he loves your work and is back for your help. He's reworking on the same project with the help of databases. Can you look into his requirements & sort things out?
-
+You can start building the project on top of Stage - 2
 
 ## What Should You Do
 ```
@@ -35,6 +35,7 @@ And finally, create a pull request so your ProGrad Mentor (PM) can review your w
 7. ***Create the connection object in the controller and call the respective methods.***
 6. ***Once the progressions are completed follow the instructions to run the application and test your code.***
 7. ***Add appropriate jars to your project directory.***
+
 
 
 ## Requirements
