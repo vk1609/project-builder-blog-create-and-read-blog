@@ -24,6 +24,7 @@ public class AddNewBlogController extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		System.out.println("Entering do post");
 		String blogTitle = request.getParameter("title");
 		String blogDescription = request.getParameter("message");

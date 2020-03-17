@@ -25,8 +25,10 @@ public class ViewAllBlogController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("View All Blogs");
 		System.out.println("Getting all blog post");
+		
 		BlogDaoImpl blogDAO = new BlogDaoImpl();
 		List<Blog> listBlog = blogDAO.selectAllBlogs();
+	
 		for(Blog bloglist:listBlog) {
 			System.out.println(bloglist.getBlogId());
 			System.out.println(bloglist.getBlogTitle());
