@@ -1,6 +1,6 @@
 ![Image description](https://i1.faceprep.in/ProGrad/face-logo-resized.png)
 
-# ProGrad Project Builder | Blog - Stage 2 (SignUp & Login)
+# ProGrad Project Builder | Blog - Stage 3 (Create and Display Blog)
 
 Remember your client Mr. Alex? 
 
