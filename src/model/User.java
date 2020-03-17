@@ -1,5 +1,4 @@
 package model;
-//Type your code
 
 import java.time.LocalDate;
 

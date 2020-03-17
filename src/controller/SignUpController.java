@@ -1,9 +1,7 @@
 package controller;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,9 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.UserDAO;
+import model.User;
 import utility.ConnectionManager;
-
-
 
 @WebServlet(urlPatterns= {"/signup"})
 public class SignUpController extends HttpServlet {
@@ -27,38 +25,40 @@ public class SignUpController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Sign up Controller");
-		Connection con=null;
-		con=ConnectionManager.getConnection();
-		if(con!=null) {
-			System.out.println("Database connection established");
-		}
-		else
-		{
-			System.out.println("Check your connection");
-		}
+//		System.out.println("Sign up Controller");
+//		Connection con=null;
+//		con=ConnectionManager.getConnection();
+//		if(con!=null) {
+//			System.out.println("Database connection established");
+//		}
+//		else
+//		{
+//			System.out.println("Check your connection");
+//		}
 		RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/signupView.jsp");
 		rd.forward(request,response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		doGet(request,response);
 		
-		/*	String email = request.getParameter("email"); //  get the email value from the jsp/html page
+		
+		String email = request.getParameter("email"); //  get the email value from the jsp/html page
 		String password = request.getParameter("password"); //  get the password value from the jsp/html page
 		String confirmPassword = request.getParameter("confirmPassword"); //  get the confirm password value from the jsp/html page
-		LocalDateTime date= LocalDateTime.now(); // Java 8 Time API used to get system date and time at a particular instance
+		LocalDate date= LocalDate.now(); // Java 8 Time API used to get system date and time at a particular instance
 		
-// 1. ***Create an object for RegistrationValidation in the SignUpController class located inside JAVA Resources - src/controller***
-// 2. ***Call the checkUserDetails method with the object created***
 		
-		if(checkUser.checkUserDetails(email, password, confirmPassword))
+		User user=new User();
+		user.setEmail(email);
+		user.setPassword(password);
+		UserDAO userdao=new UserDAO();
+		user.setDate(date);
+		int checkUser = userdao.signUp(user);
+		
+		if(checkUser!=0)
 		{
-			User user=new User(email,password,date);
-			user.setEmail(email);
-			user.setPassword(password);
-			user.setDate(date);
+						
 			System.out.println(user.getEmail());
 			System.out.println(user.getPassword());
 			System.out.println(user.getDate());
@@ -73,7 +73,7 @@ public class SignUpController extends HttpServlet {
 			rd.forward(request, response);
 		}
 		
-		*/
+		
 	}
 
 }

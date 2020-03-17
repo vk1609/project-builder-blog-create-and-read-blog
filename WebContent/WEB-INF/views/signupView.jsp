@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Wall</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
 </head>
 <body>
  <nav>

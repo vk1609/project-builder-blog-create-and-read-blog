@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import businesslogic.ValidateUser;
+import dao.UserDAO;
+import model.User;
 
 
 
@@ -31,22 +33,23 @@ public class LoginController extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	/*	String email = request.getParameter("email"); //  get the email value from the jsp/html page
+		String email = request.getParameter("email"); //  get the email value from the jsp/html page
 		String password = request.getParameter("password"); //  get the password value from the jsp/html page
 
-		ValidateUser validateUser = new ValidateUser();
-		if(validateUser.validate(email,password)) {
+		User user = new User();
+		user.setEmail(email);
+		user.setPassword(password);
+		UserDAO userdao = new UserDAO();
+		
+		boolean validateUser = userdao.loginUser(user);
+		if(validateUser) {
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/blogView.jsp");
 			rd.forward(request, response);
 		}else
 		{
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
 			rd.forward(request, response);
-		}
-		*/
-		
-		
-	
+		}	
 	}
 
 }
